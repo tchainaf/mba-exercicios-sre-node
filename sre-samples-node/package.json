@@ -5,6 +5,7 @@
   "scripts": {
     "start:timeout": " nodemon --exec node server-timeout.js --watch server-timeout.js --delay 1",
     "start:ratelimit": "nodemon --exec node server-ratelimit.js --watch server-ratelimit.js --delay 1",
+    "start:bulkhead": "nodemon --exec node server-bulkhead.js --watch server-bulkhead.js --delay 1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
