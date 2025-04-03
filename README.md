@@ -112,9 +112,7 @@ Ajustar configurações de timeout e corrigir erro de timeout execedido ao invoc
 
 ```
 // INSIRA SUA ANÁLISE OU PARECER ABAIXO
-
-
-
+Foi necessário mudar a configuração do `timeoutPromise` de 3s para 6s, de forma que comportasse o tempo de processamento da chamada externa que é de 5s.
 ```
 
 
