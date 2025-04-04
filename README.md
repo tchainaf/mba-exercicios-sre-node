@@ -112,8 +112,8 @@ Ajustar configurações de timeout e corrigir erro de timeout execedido ao invoc
 
 ```
 // INSIRA SUA ANÁLISE OU PARECER ABAIXO
-Foi necessário mudar a configuração do `timeoutPromise` de 3s para 6s, de forma que comportasse o tempo de processamento da chamada externa que é de 5s.
 ```
+>>Foi necessário mudar a configuração do `timeoutPromise` de 3s para 6s, de forma que comportasse o tempo de processamento da chamada externa que é de 5s.
 
 
 ---
@@ -177,9 +177,8 @@ Alterar limite de requisições permitidas para 100 num intervalo de 1 minuto e 
 
 ```
 // INSIRA SUA ANÁLISE OU PARECER ABAIXO
-Foi criada a rota `ratelimit-test` que faz 150 requisições seguidas e ajudou a visualizar os retornos das requisições, observando o funcionamento do ratelimit assim que a requisição de número 101 é feita.
 ```
-
+>>Foi criada a rota `ratelimit-test` que faz 150 requisições seguidas e ajudou a visualizar os retornos das requisições, observando o funcionamento do ratelimit assim que a requisição de número 101 é feita.
 
 ---
 ### 2.3 Bulkhead
@@ -242,9 +241,11 @@ Aumentar quantidade de chamadas simultâneas e avaliar o comportamento.
 
 ```
 // INSIRA SUA ANÁLISE OU PARECER ABAIXO
-Foi criado um método que faz 3 requisições paralelas e ajudou a visualizar os retornos das requisições e o comportamento do bulkhead.
-Ao implementar um intervalo de 1s e repetir as chamadas paralelas, foi possível validar como o bulkhead é afetado apenas por chamadas simultâneas e rapidamente retorna a disponibilidade para novas chamadas.
 ```
+>>Foi criado um método que faz 3 requisições paralelas e ajudou a visualizar os retornos das requisições e o comportamento do bulkhead.
+>>
+>>Ao implementar um intervalo de 1s e repetir as chamadas paralelas, foi possível validar como o bulkhead é afetado apenas por chamadas simultâneas e rapidamente retorna a disponibilidade para novas chamadas.
+
 
 
 ---
@@ -322,10 +323,10 @@ Observar comportamento do circuito no console.
 
 ```
 // INSIRA SUA ANÁLISE OU PARECER ABAIXO
-Foi criada a rota `circuitbreaker-test` que faz 10 requisições seguidas e ajudou a visualizar a ocorrência dos eventos no console e comparar com os retornos das requisições.
-Ao modificar os valores de `errorThresholdPercentage` e `resetTimeout` foi possível entender a diferença que cada um tem no comportamento do circuit breaker.
-
 ```
+>>Foi criada a rota `circuitbreaker-test` que faz 10 requisições seguidas e ajudou a visualizar a ocorrência dos eventos no console e comparar com os retornos das requisições.
+>>
+>>Ao modificar os valores de `errorThresholdPercentage` e `resetTimeout` foi possível entender a diferença que cada um tem no comportamento do circuit breaker.
 
 ---
 ### 2.5 Health Check
