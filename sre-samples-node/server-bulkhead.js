@@ -27,11 +27,11 @@ app.get('/api/bulkhead', async (req, res) => {
     }
 });
 
-// Função simulando 5 chamadas na rota bulkhead
+// Função simulando 3 chamadas na rota bulkhead
 async function simulateRequests() {
     const url = `http://localhost:${port}/api/bulkhead`;
 
-    const requests = Array.from({ length: 5 }, (_, i) => {
+    const requests = Array.from({ length: 3 }, (_, i) => {
         return axios.get(url)
             .then(response => { return response.data; })
             .catch(error => {
@@ -47,6 +47,14 @@ async function simulateRequests() {
 app.get('/api/bulkhead-test', async (req, res) => {
     try {
         const results = await simulateRequests();
+
+        // Espera 1 segundo entre as chamadas para simular um intervalo
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        // Chama novamente para simular mais chamadas
+        const moreResults = await simulateRequests();
+        
+        results.push(...moreResults);
         res.send(results);
     } catch (error) {
         res.status(500).send({ erro: error.message });

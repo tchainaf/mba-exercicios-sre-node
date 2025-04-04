@@ -30,12 +30,12 @@ app.get('/api/ratelimit', async (req, res) => {
     }
 });
 
-// Função simulando 200 chamadas na rota retelimit
+// Função simulando 150 chamadas na rota retelimit
 async function simulateRequests() {
     const url = `http://localhost:${port}/api/ratelimit`;
     const responses = [];
 
-    for (let i = 0; i < 200; i++) {
+    for (let i = 0; i < 150; i++) {
         try {
             const response = await axios.get(url);
             responses.push(response.data);
